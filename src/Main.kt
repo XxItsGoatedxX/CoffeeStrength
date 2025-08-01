@@ -1,5 +1,3 @@
-import java.lang.reflect.Modifier
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
@@ -18,8 +16,8 @@ fun main() {
 
 fun calculateCaffeineLevel(hoursWorked: Int, bugsFound: Int, energy: String): String {
     var score: Int
-    var energyScore: Int = 0
-    var caffeineLevel: String = ""
+    var energyScore = 0
+    var caffeineLevel = ""
     when (energy) {
         "tired" -> energyScore = 5
         "awake" -> energyScore = 0
@@ -41,7 +39,7 @@ fun calculateCaffeineLevel(hoursWorked: Int, bugsFound: Int, energy: String): St
 }
 
 fun canFulfillOrder(orderItems: List<String>, availableIngredients: List<String>):Boolean {
-    var count: Int = 0
+    var count = 0
     for (orderItem in orderItems) {
         if (availableIngredients.contains(orderItem)) {
             count++
