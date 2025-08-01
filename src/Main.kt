@@ -17,7 +17,7 @@ fun main() {
 fun calculateCaffeineLevel(hoursWorked: Int, bugsFound: Int, energy: String): String {
     var score: Int
     var energyScore = 0
-    var caffeineLevel = ""
+    var caffeineLevel: String
     when (energy) {
         "tired" -> energyScore = 5
         "awake" -> energyScore = 0
