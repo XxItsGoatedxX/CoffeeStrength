@@ -3,20 +3,17 @@ import java.lang.reflect.Modifier
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    val available = listOf("Coffee", "Milk", "Vanilla", "Sugar")
-    val order = listOf("Coffee", "Milk")
-    val hoursWorked: Int = 4
-    val bugsFound: Int = 2
-    val energy: String = "zombie"
-    println(calculateCaffeineLevel(hoursWorked, bugsFound, energy))
-    if(canFulfillOrder(order, available))
-    {
-        println(createDrinkName("Debugger", "extra coffee", "extra milk"))
-    }
-    else
-    {
-        println("Ingredient not available")
-    }
+    println("☕ WELCOME TO COFFEE & CODE! ☕")
+    println("Serving caffeinated programmers since 2025\n")
+
+    println("Dev worked 4 hours, found 2 bugs, feeling tired:")
+    println(calculateCaffeineLevel(4, 2, "tired"))
+
+    val available = listOf("Coffee", "Milk", "Vanilla", "Sugar", "Wifi")
+    val order = listOf("Coffee", "Milk", "Wifi")
+
+    println("\n📦 Can fulfill order $order? ${canFulfillOrder(order, available)}")
+    println("\n🍺 New drink: '${createDrinkName("NullPointer", "caffeine", "desperation", "prayers")}'")
 }
 
 fun calculateCaffeineLevel(hoursWorked: Int, bugsFound: Int, energy: String): String {
